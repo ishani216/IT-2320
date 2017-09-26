@@ -1,0 +1,48 @@
+<FOOTER>
+ 
+  	<p>
+  	<p>Click the button to display the date.</p>
+  	 
+  	<button onclick="displayDate()">The time is?</button>
+  	 
+  	<script>
+  	function displayDate() {
+  	 document.getElementById("demo").innerHTML = Date();
+  	}
+  	</script>
+  	 
+  	<p id="demo"></p>
+  	</p>
+  	<p>© 2017 Ishani Nanavaty</p>
+  	</FOOTER>
+
+I tried to eliminate the script from the HTML file, but the button does not work anymore. Below what I did:
+
+HTML unobtrusive:
+
+ <FOOTER>  
+
+    <p>Click the button to display the date.</p>
+<button id="date">The time is?</button> 
+
+ 
+
+© 2017 Yuliya Savchenko
+
+ 
+
+</FOOTER>
+
+JS Unobtrusive File:
+
+window.displayDate() {
+
+return current date;
+
+}
+
+function displayDate() { 
+
+  document.getElementById("date").innerHTML = Date(); 
+
+ }
