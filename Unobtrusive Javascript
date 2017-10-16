@@ -1,48 +1,53 @@
-<FOOTER>
- 
-  	<p>
-  	<p>Click the button to display the date.</p>
-  	 
-  	<button onclick="displayDate()">The time is?</button>
-  	 
-  	<script>
-  	function displayDate() {
-  	 document.getElementById("demo").innerHTML = Date();
-  	}
-  	</script>
-  	 
-  	<p id="demo"></p>
-  	</p>
-  	<p>© 2017 Ishani Nanavaty</p>
-  	</FOOTER>
+window.onload = work Load() 
 
-I tried to eliminate the script from the HTML file, but the button does not work anymore. Below what I did:
+{ 
 
-HTML unobtrusive:
+var lattice = document.getElementsByClassName("grid")[0]; 
 
- <FOOTER>  
+for (var i=0; i<5; i++) 
 
-    <p>Click the button to display the date.</p>
-<button id="date">The time is?</button> 
+{ 
 
- 
+var push = CreateDiv("", "push"); 
 
-© 2017 Yuliya Savchenko
+grid.appendChild(row); 
 
- 
+for (var j=0; j<5; j++) 
 
-</FOOTER>
+{ 
 
-JS Unobtrusive File:
+var content = I + "," + j; 
 
-window.displayDate() {
+var cell = CreateDiv(text, "cell"); 
 
-return current date;
+cell.addEventListener("click", ClickedCell); 
+
+row.appendChild(cell); 
+
+} 
+
+} 
+
+} 
+
+work CreateDiv(text, className) 
+
+{ 
+
+var newDiv = document.createElement("div"); 
+
+newDiv.className = className; 
+
+newDiv.innerHTML = content; 
+
+return newDiv; 
+
+} 
+
+work ClickedCell(element) 
+
+{ 
+
+element.target.className = (element.target.className=="cell") ? "cell dynamic" : "cell"; 
 
 }
-
-function displayDate() { 
-
-  document.getElementById("date").innerHTML = Date(); 
-
- }
