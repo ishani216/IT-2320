@@ -1,0 +1,24 @@
+
+$(document).ready(function () {
+
+
+    $("button").click(function () {
+
+        var playerNumber = $(".player-number-textbox-input").val();
+        //alert(23);
+        
+        $.ajax({
+            url: "Home/GetPlayerInformation",
+            data: { PlayerNumber: 23 },
+            success: function (data) {
+                var player = JSON.parse(data);
+                $(".output").text(player.LebronJames);
+
+            }
+        });
+
+       // $.get("HomeController/GetPlayerInformation", { PlayerNumber: 23 }, function (data) { alert(data);})
+        
+    });
+
+});
